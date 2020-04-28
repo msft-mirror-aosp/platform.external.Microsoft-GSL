@@ -234,8 +234,8 @@ void ostream_helper(T v)
     {
         std::ostringstream os;
         std::ostringstream ref;
-        os << static_cast<void*>(p);
-        ref << static_cast<void*>(&v);
+        os << p;
+        ref << &v;
         CHECK(os.str() == ref.str());
     }
     {
